@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  block-size: 100%;
+}
+
+body {
+  width: 512px;
+  height: 512px;
+  background-color: #1e1e1e;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  block-size: 100%;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 109px 323px 40px;
+  grid-template-rows: 155px 190px 53px 54px;
+  grid-template-areas:
+    "greywhite red red"
+    "white1 red red"
+    "blue white2 white3"
+    "blue white2 grey1";
+  gap: 20px;
+  background-color: #000;
+}
+
+.greywhite {
+  display: flex;
+  grid-area: greywhite;
+  grid-column: 1;
+  grid-row: 1;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.grey {
+  width: 100%;
+  background-color: grey;
+}
+
+.white {
+  width: 100%;
+  background-color: #fff;
+}
+
+.white1 {
+  grid-area: white;
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #fff;
+}
+
+.red {
+  grid-area: red;
+  grid-column: 2 / span 2;
+  grid-row: 1 / span 2;
+  background-color: #ff0000;
+}
+
+.blue {
+  grid-area: blue;
+  grid-column: 1;
+  grid-row: 3 / span 2;
+  background-color: #0000ff;
+}
+
+.white2 {
+  grid-area: white3;
+  grid-column: 2;
+  grid-row: 3 / span 2;
+  background-color: #fff;
+}
+
+.white3 {
+  grid-area: grey2;
+  grid-column: 3;
+  grid-row: 3;
+  background-color: #fff;
+}
+
+.grey1 {
+  grid-area: white4;
+  grid-column: 3;
+  grid-row: 4;
+  background-color: grey;
+}
